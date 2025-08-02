@@ -1,0 +1,3 @@
+[submodule "suppl"]
+	path = suppl
+	url = https://github.com/yuna0x0/spf-suppl-web.git
