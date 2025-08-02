@@ -1,4 +1,5 @@
-# Project Page for See, Point, Fly: A Learning-Free VLM Framework for Universal Unmanned Aerial Navigation
+# [CoRL 2025] See, Point, Fly | Project Page
+See, Point, Fly: A Learning-Free VLM Framework for Universal Unmanned Aerial Navigation
 
 ## Components
 - Teaser video
