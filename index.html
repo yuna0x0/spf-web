@@ -15,7 +15,7 @@
             content="See, Point, Fly (SPF), a novel VLM-based AVLN framework that navigates to any goal based on any free-form instructions in any environment."
         />
         <meta property="og:url" content="https://spf-web.pages.dev" />
-        <meta property="og:image" content="static/image/teaser.webp" />
+        <meta property="og:image" content="static/images/teaser-crop.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
@@ -27,14 +27,13 @@
             name="twitter:description"
             content="See, Point, Fly (SPF), a novel VLM-based AVLN framework that navigates to any goal based on any free-form instructions in any environment."
         />
-        <meta name="twitter:image" content="static/images/teaser.webp" />
+        <meta name="twitter:image" content="static/images/teaser-crop.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="keywords"
             content="Vision-Language Models, Zero-shot UAV Navigation, 2D-to-3D, Waypoint Prompting"
         />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
         <title>
             See, Point, Fly: A Learning-Free VLM Framework for Universal
             Unmanned Aerial Navigation
@@ -47,20 +46,59 @@
 
         <link rel="stylesheet" href="static/css/bulma.min.css" />
         <!-- <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css"> -->
+        <link rel="stylesheet" href="static/css/bulma-slider.min.css"> -->
         <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+            href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css"
+            integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw="
+            crossorigin="anonymous"
         />
         <link rel="stylesheet" href="static/css/index.css" />
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
         <!-- <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script> -->
         <script defer src="static/js/fontawesome.all.min.js"></script>
         <!-- <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script> -->
+        <script src="static/js/bulma-slider.min.js"></script>
+        <script src="static/js/index.js"></script> -->
+
+        <!-- Image Comparison Slider -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8.0.6/dist/index.js"
+            integrity="sha256-jsT0rJqlj3mgBC9hjcljDSW9sj8dcsJC/i2KWu79bjc="
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8.0.6/dist/styles.min.css"
+        />
+
+        <!-- MathJax support -->
+        <script>
+            window.MathJax = {
+                tex: {
+                    inlineMath: [["$", "$"]],
+                },
+            };
+        </script>
+        <script
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"
+            integrity="sha256-qoRlVrS5NAnXSSSiMfFXwK8C9obG11Iybe4h2+bQYR4="
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            defer
+            src="https://analytics.fbk.moe/script.js"
+            data-website-id="dd6dac51-a8f9-4bbd-af41-e54f4c1db961"
+        ></script>
     </head>
 
     <body>
@@ -197,15 +235,18 @@
                                     </span>
 
                                     <!-- Github link -->
-                                    <!-- <span class="link-block">
-                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span> -->
+                                    <span class="link-block">
+                                        <a
+                                            href="#"
+                                            target="_blank"
+                                            class="external-link button is-normal is-rounded is-dark is-disabled"
+                                        >
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                            <span>Code (Coming Soon)</span>
+                                        </a>
+                                    </span>
 
                                     <!-- ArXiv abstract Link -->
                                     <span class="link-block">
@@ -233,13 +274,17 @@
             <div class="container is-max-desktop">
                 <div class="hero-body">
                     <img
-                        src="static/images/teaser.webp"
+                        src="static/images/teaser-crop.webp"
                         alt="See, Point, Fly: Teaser Image"
                     />
                     <h2 class="subtitle has-text-centered">
-                        See, Point, Fly (SPF), a novel VLM-based AVLN framework
-                        that navigates to any goal based on any free-form
-                        instructions in any environment.
+                        <strong>Zero-shot language-guided UAV control.</strong>
+                        SPF enables UAVs to navigate to any goal based on
+                        free-form natural language instructions in any
+                        environment, without task-specific training. The system
+                        demonstrates robust performance across diverse scenarios
+                        including obstacle avoidance, long-horizon planning, and
+                        dynamic target following.
                     </h2>
                 </div>
             </div>
@@ -295,105 +340,879 @@
         <!-- Method overview -->
         <section class="section">
             <div class="container is-max-desktop">
-                <h2 class="title is-3">Method overview</h2>
+                <h2 class="title is-3">Method Overview</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Proin ullamcorper tellus sed ante aliquam tempus. Etiam
-                        porttitor urna feugiat nibh elementum, et tempor dolor
-                        mattis. Donec accumsan enim augue, a vulputate nisi
-                        sodales sit amet. Proin bibendum ex eget mauris cursus
-                        euismod nec et nibh. Maecenas ac gravida ante, nec
-                        cursus dui. Vivamus purus nibh, placerat ac purus eget,
-                        sagittis vestibulum metus. Sed vestibulum bibendum
-                        lectus gravida commodo. Pellentesque auctor leo vitae
-                        sagittis suscipit.
+                        We formulate UAV navigation as an iterative
+                        target-reaching process in 3D space. At each timestep
+                        $t$, the system processes the current visual observation
+                        $I_t \in \mathbb{R}^{H\times W\times3}$ along with a
+                        natural language instruction $\ell$ to determine the
+                        next motion. Our approach leverages vision-language
+                        models (VLMs) to transform navigation instructions into
+                        interpretable waypoint decisions that can be efficiently
+                        converted into UAV control signals.
                     </p>
+                    <p>
+                        The system operates through three key stages: (1) Given
+                        $\ell$ and $I_t$, we use a VLM to produce structured
+                        spatial understanding, predicting 2D waypoints and step
+                        sizes; (2) We transform the predicted 2D waypoint into
+                        3D displacement vectors, yielding executable low-level
+                        commands; (3) A lightweight reactive controller
+                        continuously updates observations and executes motion
+                        commands in closed-loop manner.
+                    </p>
+                    <div class="has-text-centered card-container">
+                        <img
+                            src="static/images/pipeline.webp"
+                            alt="SPF Pipeline Overview"
+                            style="
+                                max-width: 100%;
+                                height: auto;
+                                margin: 1rem 0;
+                            "
+                        />
+                        <p class="has-text-centered is-size-6 has-text-grey">
+                            <strong>Pipeline Overview:</strong> A camera frame
+                            and user instructions enter a frozen vision-language
+                            model, which returns structured JSON with 2D
+                            waypoints and obstacle information. An
+                            Action-to-Control layer converts this into low-level
+                            velocity commands for the UAV.
+                        </p>
+                    </div>
+                    <h3 class="title is-4" style="margin-top: 2rem">
+                        VLM-based Obstacle-Aware Action Planning
+                    </h3>
+                    <p>
+                        We frame this stage as a structured visual grounding
+                        task, where the VLM $G$ processes an egocentric UAV
+                        camera observation $I_t$ alongside a natural language
+                        instruction $\ell$. The VLM outputs a spatial plan $O_t
+                        = \{u, v, d_\text{VLM}\}$ specifying a navigation target
+                        in image space, where $(u, v)$ are pixel coordinates and
+                        $d_\text{VLM} \in \{1, 2, \ldots, L\}$ is a discretized
+                        depth label representing the intended travel distance.
+                    </p>
+                    <p>
+                        The key insight is that $d_\text{VLM}$ represents the
+                        VLM's prediction of appropriate movement magnitude along
+                        the UAV's forward direction, rather than a sensored
+                        depth measurement. When obstacle-avoidance is activated,
+                        the VLM generates waypoints that guide the UAV toward
+                        the goal while avoiding detected obstacles, enabling
+                        safe navigation through cluttered environments.
+                    </p>
+
+                    <h3 class="title is-4" style="margin-top: 2rem">
+                        Adaptive Travel Distance and 3D Transformation
+                    </h3>
+                    <p>
+                        To address the limitation that VLMs may lack precise
+                        understanding of real-world 3D geometry, we employ an
+                        adaptive scaling approach. The discrete depth label
+                        $d_\text{VLM}$ is converted into an adjusted step size
+                        using a non-linear scaling curve:
+                    </p>
+                    <div style="text-align: center; margin: 1rem 0">
+                        $$d_\text{adj} = \max \left( d_{\min},\; s \times \left(
+                        \frac{d_\text{VLM}}{L} \right)^p \right)$$
+                    </div>
+                    <p>
+                        This enables the UAV to take larger steps in open areas
+                        while executing smaller, more cautious movements near
+                        targets and obstacles. The predicted 2D waypoint $(u,
+                        v)$ and adjusted depth $d_\text{adj}$ are then
+                        unprojected through the camera model to obtain a 3D
+                        displacement vector $(S_x, S_y, S_z)$, which is
+                        decomposed into control primitives: yaw, pitch, and
+                        throttle commands.
+                    </p>
+                    <p>
+                        By outsourcing high-level spatial reasoning to the VLM
+                        and employing a lightweight geometric controller, our
+                        method achieves robust zero-shot UAV navigation directly
+                        from language—without relying on skill libraries,
+                        external depth sensors, policy optimization, or model
+                        training.
+                    </p>
+                    <div
+                        class="has-text-centered card-container"
+                        style="margin-top: 2rem"
+                    >
+                        <img
+                            src="static/images/method_details.webp"
+                            alt="SPF Method Details"
+                            style="
+                                max-width: 100%;
+                                height: auto;
+                                margin: 1rem 0;
+                            "
+                        />
+                        <p class="has-text-centered is-size-6 has-text-grey">
+                            <strong>Method Details:</strong> Our approach
+                            transforms 2D waypoint predictions into 3D
+                            displacement vectors through geometric projection,
+                            with adaptive step-size control for efficient
+                            navigation.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- End method overview -->
 
-        <!-- Results -->
+        <!-- Quantitative Results -->
         <section class="section">
             <div class="container is-max-desktop">
-                <h2 class="title is-3">Results</h2>
                 <div class="content has-text-justified">
+                    <h2 class="title is-3">Quantitative Results</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Proin ullamcorper tellus sed ante aliquam tempus. Etiam
-                        porttitor urna feugiat nibh elementum, et tempor dolor
-                        mattis. Donec accumsan enim augue, a vulputate nisi
-                        sodales sit amet. Proin bibendum ex eget mauris cursus
-                        euismod nec et nibh. Maecenas ac gravida ante, nec
-                        cursus dui. Vivamus purus nibh, placerat ac purus eget,
-                        sagittis vestibulum metus. Sed vestibulum bibendum
-                        lectus gravida commodo. Pellentesque auctor leo vitae
-                        sagittis suscipit.
+                        We evaluated SPF in both high-fidelity simulation and
+                        real-world environments across six task categories:
+                        Navigation, Obstacle Avoidance, Long Horizon, Reasoning,
+                        Search, and Follow. Our method significantly outperforms
+                        existing approaches, achieving
+                        <strong>93.9%</strong> success rate in simulation and
+                        <strong>92.7%</strong> in real-world experiments,
+                        compared to TypeFly (0.9%/23.6%) and PIVOT (28.7%/5.5%).
                     </p>
 
-                    <iframe
-                        src="suppl/pages/qualitative_video.html?type=simulator&embed=true"
-                        width="995"
-                        height="625"
-                        title="Qualitative comparison of flight trajectories in the simulator"
-                    ></iframe>
-                    <iframe
-                        src="suppl/pages/qualitative_video.html?type=realworld&embed=true"
-                        width="995"
-                        height="530"
-                        title="Qualitative comparison of flight trajectories in the real-world"
-                    ></iframe>
+                    <p>
+                        SPF demonstrates superior performance in complex
+                        scenarios requiring spatial reasoning and planning, with
+                        perfect navigation performance in simulation (100%) and
+                        strong capabilities in obstacle avoidance (92% vs. 16%
+                        for PIVOT), long-horizon tasks (92% vs. 28% for PIVOT),
+                        and search tasks (92% vs. 36% for PIVOT).
+                    </p>
+
+                    <p>
+                        Real-world experiments confirmed our method's
+                        effectiveness with exceptional performance in reasoning
+                        tasks (100% success rate) and robust navigation across
+                        diverse environments.
+                    </p>
+
+                    <div style="margin: 2rem 0" class="card-container">
+                        <table
+                            class="table is-bordered is-striped is-fullwidth"
+                        >
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th style="text-align: center">
+                                        Navigation
+                                    </th>
+                                    <th style="text-align: center">
+                                        Obstacle Avoid
+                                    </th>
+                                    <th style="text-align: center">
+                                        Long Horizon
+                                    </th>
+                                    <th style="text-align: center">
+                                        Reasoning
+                                    </th>
+                                    <th style="text-align: center">
+                                        Search/Follow
+                                    </th>
+                                    <th
+                                        style="
+                                            text-align: center;
+                                            border-left: 2px solid #333;
+                                        "
+                                    >
+                                        Overall
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td
+                                        colspan="7"
+                                        class="has-text-weight-bold has-text-grey"
+                                    >
+                                        Simulation
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TypeFly</td>
+                                    <td>1/25</td>
+                                    <td>0/25</td>
+                                    <td>0/25</td>
+                                    <td>0/15</td>
+                                    <td>0/25</td>
+                                    <td style="border-left: 2px solid #333">
+                                        0.9%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PIVOT</td>
+                                    <td>11/25</td>
+                                    <td>4/25</td>
+                                    <td>7/25</td>
+                                    <td>2/15</td>
+                                    <td>9/25</td>
+                                    <td style="border-left: 2px solid #333">
+                                        28.7%
+                                    </td>
+                                </tr>
+                                <tr class="has-text-weight-bold">
+                                    <td>SPF (Ours)</td>
+                                    <td>25/25</td>
+                                    <td>23/25</td>
+                                    <td>23/25</td>
+                                    <td>14/15</td>
+                                    <td>23/25</td>
+                                    <td style="border-left: 2px solid #333">
+                                        93.9%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        colspan="7"
+                                        class="has-text-weight-bold has-text-grey"
+                                    >
+                                        Real-world
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TypeFly</td>
+                                    <td>1/5</td>
+                                    <td>3/10</td>
+                                    <td>5/10</td>
+                                    <td>2/20</td>
+                                    <td>2/10</td>
+                                    <td style="border-left: 2px solid #333">
+                                        23.6%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PIVOT</td>
+                                    <td>0/5</td>
+                                    <td>1/10</td>
+                                    <td>0/10</td>
+                                    <td>2/20</td>
+                                    <td>0/10</td>
+                                    <td style="border-left: 2px solid #333">
+                                        5.5%
+                                    </td>
+                                </tr>
+                                <tr class="has-text-weight-bold">
+                                    <td>SPF (Ours)</td>
+                                    <td>5/5</td>
+                                    <td>7/10</td>
+                                    <td>9/10</td>
+                                    <td>20/20</td>
+                                    <td>10/10</td>
+                                    <td style="border-left: 2px solid #333">
+                                        92.7%
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="has-text-centered is-size-6 has-text-grey">
+                            <strong>
+                                Success rate (%) comparison across task
+                                categories:</strong
+                            >
+                            Our framework significantly outperforms TypeFly and
+                            PIVOT baselines in both high-fidelity simulation and
+                            real-world DJI Tello experiments. Note that Search
+                            tasks were exclusively evaluated in simulation,
+                            while Follow tasks were only tested in real-world
+                            settings due to environment constraints
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- End results -->
 
+        <!-- Qualitative Comparison -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3">Qualitative Comparison</h2>
+                <div class="content has-text-justified card-container">
+                    <div>
+                        <h3 class="title is-4">Simulator Results</h3>
+                        <div
+                            class="columns is-multiline"
+                            style="justify-content: center"
+                        >
+                            <div class="column is-half">
+                                <figure class="image">
+                                    <img
+                                        src="static/images/qualitative/sim_obstacle.webp"
+                                        alt="Simulator Obstacle Avoidance"
+                                    />
+                                    <figcaption class="has-text-centered">
+                                        Obstacle Avoidance
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="column is-half">
+                                <figure class="image">
+                                    <img
+                                        src="static/images/qualitative/sim_search.webp"
+                                        alt="Simulator Pattern Search"
+                                    />
+                                    <figcaption class="has-text-centered">
+                                        Pattern Search
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="column is-half">
+                                <figure class="image">
+                                    <img
+                                        src="static/images/qualitative/sim_targetid.webp"
+                                        alt="Simulator Target Identification"
+                                    />
+                                    <figcaption class="has-text-centered">
+                                        Target Identification
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <p class="has-text-centered">
+                            <span style="color: #48c774">■ Our Method</span> |
+                            <span style="color: #3273dc">■ PIVOT</span> |
+                            <span style="color: #b86bff">■ TypeFly</span>
+                        </p>
+                        <p class="has-text-centered is-size-6 has-text-grey">
+                            <strong
+                                >Qualitative comparison of flight trajectories
+                                in the simulator:</strong
+                            >
+                            The absence of a colored path indicates the baseline
+                            failed to issue any fly command. Full videos are
+                            included below.
+                        </p>
+                    </div>
+
+                    <hr
+                        style="
+                            border: none;
+                            border-top: 2px dotted #ccc;
+                            margin: 2rem 0;
+                        "
+                    />
+
+                    <div style="margin: 2rem 0">
+                        <h3 class="title is-4">Real-World Results</h3>
+
+                        <!-- Obstacle Avoidance Section -->
+                        <div>
+                            <h4 class="subtitle is-4 has-text-centered">
+                                Obstacle Avoidance Task
+                            </h4>
+                            <div class="columns is-multiline">
+                                <div class="column is-half">
+                                    <img-comparison-slider
+                                        class="comparison-pivot"
+                                    >
+                                        <img
+                                            slot="first"
+                                            src="static/images/qualitative/realworld_obstacle_ours.webp"
+                                            alt="Our Method - Obstacle Avoidance"
+                                        />
+                                        <img
+                                            slot="second"
+                                            src="static/images/qualitative/realworld_obstacle_pivot.webp"
+                                            alt="PIVOT - Obstacle Avoidance"
+                                        />
+                                    </img-comparison-slider>
+                                </div>
+                                <div class="column is-half">
+                                    <img-comparison-slider
+                                        class="comparison-typefly"
+                                    >
+                                        <img
+                                            slot="first"
+                                            src="static/images/qualitative/realworld_obstacle_ours.webp"
+                                            alt="Our Method - Obstacle Avoidance"
+                                        />
+                                        <img
+                                            slot="second"
+                                            src="static/images/qualitative/realworld_obstacle_typefly.webp"
+                                            alt="TypeFly - Obstacle Avoidance"
+                                        />
+                                    </img-comparison-slider>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <!-- Reasoning Task Section -->
+                        <div>
+                            <h4 class="subtitle is-4 has-text-centered">
+                                Reasoning Task
+                            </h4>
+                            <div class="columns is-multiline">
+                                <div class="column is-half">
+                                    <img-comparison-slider
+                                        class="comparison-pivot"
+                                    >
+                                        <img
+                                            slot="first"
+                                            src="static/images/qualitative/realworld_reasoning_ours.webp"
+                                            alt="Our Method - Reasoning Task"
+                                        />
+                                        <img
+                                            slot="second"
+                                            src="static/images/qualitative/realworld_reasoning_pivot.webp"
+                                            alt="PIVOT - Reasoning Task"
+                                        />
+                                    </img-comparison-slider>
+                                </div>
+                                <div class="column is-half">
+                                    <img-comparison-slider
+                                        class="comparison-typefly"
+                                    >
+                                        <img
+                                            slot="first"
+                                            src="static/images/qualitative/realworld_reasoning_ours.webp"
+                                            alt="Our Method - Reasoning Task"
+                                        />
+                                        <img
+                                            slot="second"
+                                            src="static/images/qualitative/realworld_reasoning_typefly.webp"
+                                            alt="TypeFly - Reasoning Task"
+                                        />
+                                    </img-comparison-slider>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <!-- Following Task Section -->
+                        <div>
+                            <h4 class="subtitle is-4 has-text-centered">
+                                Following Task
+                            </h4>
+                            <div class="columns is-multiline">
+                                <div class="column is-half">
+                                    <img-comparison-slider
+                                        class="comparison-pivot"
+                                    >
+                                        <img
+                                            slot="first"
+                                            src="static/images/qualitative/realworld_follow_ours.webp"
+                                            alt="Our Method - Following Task"
+                                        />
+                                        <img
+                                            slot="second"
+                                            src="static/images/qualitative/realworld_follow_pivot.webp"
+                                            alt="PIVOT - Following Task"
+                                        />
+                                    </img-comparison-slider>
+                                </div>
+                                <div class="column is-half">
+                                    <img-comparison-slider
+                                        class="comparison-typefly"
+                                    >
+                                        <img
+                                            slot="first"
+                                            src="static/images/qualitative/realworld_follow_ours.webp"
+                                            alt="Our Method - Following Task"
+                                        />
+                                        <img
+                                            slot="second"
+                                            src="static/images/qualitative/realworld_follow_typefly.webp"
+                                            alt="TypeFly - Following Task"
+                                        />
+                                    </img-comparison-slider>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <!-- Long Horizon Task Section -->
+                        <div>
+                            <h4 class="subtitle is-4 has-text-centered">
+                                Long Horizon Task
+                            </h4>
+                            <div class="columns is-multiline">
+                                <div class="column is-half">
+                                    <img-comparison-slider
+                                        class="comparison-pivot"
+                                    >
+                                        <img
+                                            slot="first"
+                                            src="static/images/qualitative/realworld_long_horizon_ours.webp"
+                                            alt="Our Method - Long Horizon Task"
+                                        />
+                                        <img
+                                            slot="second"
+                                            src="static/images/qualitative/realworld_long_horizon_pivot.webp"
+                                            alt="PIVOT - Long Horizon Task"
+                                        />
+                                    </img-comparison-slider>
+                                </div>
+                                <div class="column is-half">
+                                    <img-comparison-slider
+                                        class="comparison-typefly"
+                                    >
+                                        <img
+                                            slot="first"
+                                            src="static/images/qualitative/realworld_long_horizon_ours.webp"
+                                            alt="Our Method - Long Horizon Task"
+                                        />
+                                        <img
+                                            slot="second"
+                                            src="static/images/qualitative/realworld_long_horizon_typefly.webp"
+                                            alt="TypeFly - Long Horizon Task"
+                                        />
+                                    </img-comparison-slider>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="has-text-centered" style="margin-top: 1rem">
+                            <span style="color: #48c774"
+                                >■ Take Off Trajectory</span
+                            >
+                            |
+                            <span style="color: magenta"
+                                >■ Task Trajectory</span
+                            >
+                        </p>
+                        <p class="has-text-centered">
+                            <strong
+                                >Qualitative comparison of flight trajectories
+                                in the real-world:</strong
+                            >
+                            SPF demonstrates robust performance across diverse
+                            real-world scenarios, successfully completing
+                            complex tasks that require spatial reasoning,
+                            obstacle avoidance, and long-term planning.
+                        </p>
+                    </div>
+                </div>
+
+                <br />
+
+                <div>
+                    <h3 class="title is-4">Videos</h3>
+                    <iframe
+                        src="suppl/pages/qualitative_video.html?type=simulator&embed=true"
+                        width="995"
+                        height="625"
+                        title="Qualitative comparison of flight trajectories in the simulator"
+                        style="margin-bottom: 1rem"
+                    ></iframe>
+                    <iframe
+                        src="suppl/pages/qualitative_video.html?type=realworld&embed=true"
+                        width="995"
+                        height="535"
+                        title="Qualitative comparison of flight trajectories in the real-world"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- End Qualitative Comparison -->
+
         <!-- Ablation study -->
         <section class="section">
             <div class="container is-max-desktop">
-                <h2 class="title is-3">Ablation study</h2>
+                <h2 class="title is-3">Ablation Studies</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Proin ullamcorper tellus sed ante aliquam tempus. Etiam
-                        porttitor urna feugiat nibh elementum, et tempor dolor
-                        mattis. Donec accumsan enim augue, a vulputate nisi
-                        sodales sit amet. Proin bibendum ex eget mauris cursus
-                        euismod nec et nibh. Maecenas ac gravida ante, nec
-                        cursus dui. Vivamus purus nibh, placerat ac purus eget,
-                        sagittis vestibulum metus. Sed vestibulum bibendum
-                        lectus gravida commodo. Pellentesque auctor leo vitae
-                        sagittis suscipit.
+                        We conducted comprehensive ablation studies to evaluate
+                        the effectiveness of each component in our framework.
+                        Our analysis covers different VLM backends, prompting
+                        strategies, and the impact of adaptive step-size
+                        control.
+                    </p>
+
+                    <div style="margin: 2rem 0">
+                        <h3 class="title is-4">
+                            VLM Backend and Prompting Strategy
+                        </h3>
+                        <table
+                            class="table is-bordered is-striped is-fullwidth"
+                        >
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th style="text-align: center">
+                                        Action Prediction
+                                    </th>
+                                    <th style="text-align: center">
+                                        VLM Model
+                                    </th>
+                                    <th style="text-align: center">
+                                        Success Rate (%)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: left">Plain VLM</td>
+                                    <td style="text-align: center">
+                                        Text Generation
+                                    </td>
+                                    <td style="text-align: center">
+                                        Gemini 2.0 Flash
+                                    </td>
+                                    <td style="text-align: center">7</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">PIVOT</td>
+                                    <td style="text-align: center">
+                                        Visual Prompting
+                                    </td>
+                                    <td style="text-align: center">
+                                        Gemini 2.0 Flash
+                                    </td>
+                                    <td style="text-align: center">40</td>
+                                </tr>
+                                <tr class="has-text-weight-bold">
+                                    <td
+                                        rowspan="6"
+                                        style="
+                                            text-align: left;
+                                            vertical-align: middle;
+                                        "
+                                    >
+                                        SPF (Ours)
+                                    </td>
+                                    <td
+                                        rowspan="6"
+                                        style="
+                                            text-align: center;
+                                            vertical-align: middle;
+                                        "
+                                    >
+                                        2D Waypoint Labeling
+                                    </td>
+                                    <td style="text-align: center">
+                                        Gemini 2.0 Flash-Lite
+                                    </td>
+                                    <td style="text-align: center">
+                                        <strong>87</strong>
+                                    </td>
+                                </tr>
+                                <tr class="has-text-weight-bold">
+                                    <td style="text-align: center">
+                                        Gemini 2.0 Flash
+                                    </td>
+                                    <td style="text-align: center">
+                                        <strong>100</strong>
+                                    </td>
+                                </tr>
+                                <tr class="has-text-weight-bold">
+                                    <td style="text-align: center">
+                                        Gemini 2.5 Pro
+                                    </td>
+                                    <td style="text-align: center">
+                                        <strong>100</strong>
+                                    </td>
+                                </tr>
+                                <tr class="has-text-weight-bold">
+                                    <td style="text-align: center">GPT-4.1</td>
+                                    <td style="text-align: center">
+                                        <strong>100</strong>
+                                    </td>
+                                </tr>
+                                <tr class="has-text-weight-bold">
+                                    <td style="text-align: center">
+                                        Claude 3.7 Sonnet
+                                    </td>
+                                    <td style="text-align: center">
+                                        <strong>93.3</strong>
+                                    </td>
+                                </tr>
+                                <tr class="has-text-weight-bold">
+                                    <td style="text-align: center">
+                                        Llama 4 Maverick
+                                    </td>
+                                    <td style="text-align: center">
+                                        <strong>93.3</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Structured Prompting and Grounding:</strong> We
+                        compared three VLM-based action prediction approaches:
+                        our method (prompting VLM to label 2D waypoints on
+                        images), plain VLM (predicting actions as text) and
+                        PIVOT (selecting from candidate 2D points on images).
+                        Our approach significantly outperforms alternatives with
+                        a success rate of 100% versus just 7% for plain VLM and
+                        40% for PIVOT on navigation tasks, demonstrating the
+                        effectiveness of our structured visual grounding
+                        formulation.
+                    </p>
+
+                    <p>
+                        <strong>VLM Generalization:</strong> Our method performs
+                        robustly across multiple VLMs: Gemini 2.5 Pro, Gemini
+                        2.0 Flash, and GPT-4.1 all achieved 100% success rate;
+                        Claude 3.7 Sonnet and Llama 4 Maverick reached 93.3%;
+                        and even Gemini 2.0 Flash-Lite achieved 87%. This
+                        demonstrates our framework's effective generalization
+                        across vision-language models of varying capabilities.
+                    </p>
+
+                    <div style="margin: 2rem 0">
+                        <h3 class="title is-4">
+                            Adaptive Step-Size Controller
+                        </h3>
+                        <div class="columns">
+                            <div class="column is-two-thirds">
+                                <table
+                                    class="table is-bordered is-striped is-fullwidth"
+                                >
+                                    <thead>
+                                        <tr>
+                                            <th>Task</th>
+                                            <th style="text-align: center">
+                                                Step
+                                            </th>
+                                            <th style="text-align: center">
+                                                Completion Time
+                                            </th>
+                                            <th style="text-align: center">
+                                                Success Rate (%)
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td
+                                                rowspan="2"
+                                                style="
+                                                    vertical-align: middle;
+                                                    text-align: left;
+                                                "
+                                            >
+                                                "Fly to the cones and the next."
+                                            </td>
+                                            <td style="text-align: center">
+                                                Fixed
+                                            </td>
+                                            <td style="text-align: center">
+                                                61s
+                                            </td>
+                                            <td style="text-align: center">
+                                                5/5
+                                            </td>
+                                        </tr>
+                                        <tr class="has-text-weight-bold">
+                                            <td style="text-align: center">
+                                                Adaptive
+                                            </td>
+                                            <td style="text-align: center">
+                                                <strong>28s</strong>
+                                            </td>
+                                            <td style="text-align: center">
+                                                <strong>5/5</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                rowspan="2"
+                                                style="
+                                                    vertical-align: middle;
+                                                    text-align: left;
+                                                "
+                                            >
+                                                "I'm thirsty. Find something
+                                                that can help me."
+                                            </td>
+                                            <td style="text-align: center">
+                                                Fixed
+                                            </td>
+                                            <td style="text-align: center">
+                                                50.25s
+                                            </td>
+                                            <td style="text-align: center">
+                                                4/5
+                                            </td>
+                                        </tr>
+                                        <tr class="has-text-weight-bold">
+                                            <td style="text-align: center">
+                                                Adaptive
+                                            </td>
+                                            <td style="text-align: center">
+                                                <strong>35.20s</strong>
+                                            </td>
+                                            <td style="text-align: center">
+                                                <strong>5/5</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                rowspan="2"
+                                                style="
+                                                    vertical-align: middle;
+                                                    text-align: left;
+                                                "
+                                            >
+                                                "It's raining. Head to the
+                                                comfiest chair that will keep
+                                                you dry."
+                                            </td>
+                                            <td style="text-align: center">
+                                                Fixed
+                                            </td>
+                                            <td style="text-align: center">
+                                                47s
+                                            </td>
+                                            <td style="text-align: center">
+                                                5/5
+                                            </td>
+                                        </tr>
+                                        <tr class="has-text-weight-bold">
+                                            <td style="text-align: center">
+                                                Adaptive
+                                            </td>
+                                            <td style="text-align: center">
+                                                <strong>30s</strong>
+                                            </td>
+                                            <td style="text-align: center">
+                                                <strong>5/5</strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="column">
+                                <figure class="image">
+                                    <img
+                                        src="static/images/qualitative/completion_time.webp"
+                                        alt="Completion Time Comparison"
+                                    />
+                                    <figcaption class="has-text-centered">
+                                        Completion Time Analysis
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        <strong>Adaptive Travel Distance Scaling:</strong> Our
+                        method significantly speeds up the travel time using the
+                        proposed adaptive distance scaling. It maintains
+                        navigation performance, while reducing the average
+                        completion time from 50.25 to 35.20 seconds. The results
+                        are presented in the table above. We refer to the
+                        supplementary material for more details of the
+                        experimental setup.
                     </p>
                 </div>
             </div>
         </section>
         <!-- End ablation study -->
-
-        <!-- References -->
-        <section class="section">
-            <div class="container is-max-desktop">
-                <h2 class="title is-3">References</h2>
-                <div class="content has-text-justified">
-                    <ul>
-                        <li>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.
-                        </li>
-                        <li>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.
-                        </li>
-                        <li>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- End references -->
 
         <!--BibTex citation -->
         <section class="section" id="BibTeX">
@@ -421,11 +1240,12 @@
                                     target="_blank"
                                     >Academic Project Page Template</a
                                 >
-                                which was adopted from the <a
+                                which was adopted from the<a
                                     href="https://nerfies.github.io"
                                     target="_blank"
-                                    >Nerfies</a
-                                > project page.<br />
+                                >
+                                    Nerfies </a
+                                >project page.<br />
                                 This website is licensed under a
                                 <a
                                     rel="license"
@@ -440,11 +1260,5 @@
                 </div>
             </div>
         </footer>
-
-        <!-- Statcounter tracking code -->
-
-        <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-        <!-- End of Statcounter Code -->
     </body>
 </html>
